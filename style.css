@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+:root{
+    --radius:15px;
+    --app-width: 600px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color:#708a81;
+}
+
+.app{
+    color: #305663;
+    background-color: #ccdad8;
+    width:var(--app-width);
+    border-radius: var(--radius);
+    padding: 2rem;
+}
+
+.app h1{
+    margin-top: 0;
+    margin-bottom: 40 px;
+    font-size: 2rem;
+}
+
+.todo-input{
+    width: 100%;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: var(--radius);
+    padding: 1rem, 1.5rem;
+    font-size: 20px;
+    background-color: #8daab4;
+}
+
+.todo-input::placeholder{
+    color: rgb(30, 33, 71);
+}
+
+.todos, .completed-todos, .uncompleted-todos{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.todo-item{
+    background-color: #a8c4ba;
+    padding:  1rem, 1.5rem;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item span{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.todo-item input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    accent-color: rgb(98, 161, 73);
+}
+
+.todo-item a{
+    color: rgb(126, 39, 39);
+}
+
+.completed-todos .todo-item{
+    background-color: #78948a;
+    text-decoration: line-through;
+}
+
+.completed-title{
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
